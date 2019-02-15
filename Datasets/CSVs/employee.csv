@@ -1,0 +1,6 @@
+﻿EmployeeID,FirstName,LastName,Department,ExpPoints,Level,TurnedInvoices,PendingInvoices
+1101,Ashok ,Patel,C2R,40000,3,4,2
+1102,Daniel,Kilcullen,C2R,20000,2,2,3
+1103,Daryl,Soo,C2R,40000,3,4,1
+1104,Kevin,Schmidt,C2R,30000,2,3,2
+1105,Michael,Frutiger,C2R,50000,4,5,1
