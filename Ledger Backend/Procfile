@@ -1,1 +1,1 @@
-web: gunicorn fetcher:app
+web: gunicorn webhook:app
