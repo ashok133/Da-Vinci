@@ -1,1 +1,1 @@
-web: gunicorn ledger:app
+web: gunicorn ledger:app --log-file -
