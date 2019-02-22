@@ -1,8 +1,9 @@
 CREATE TABLE CONTRACT(
    ContractID      VARCHAR(10) NOT NULL PRIMARY KEY,
-   CompanyID       INTEGER  NOT NULL FOREIGN KEY REFERENCES Client(ClientID),
+   CompanyID       VARCHAR(10) NOT NULL,
    DateSigned      DATE  NOT NULL,
-   TerminationDate DATE  NOT NULL
+   TerminationDate DATE  NOT NULL,
+   FOREIGN KEY(CompanyID) REFERENCES CLIENT(ClientID)
 );
 
 INSERT INTO CONTRACT(ContractID,CompanyID,DateSigned,TerminationDate) VALUES ('PS-1100896',1,'04/08/19','04/08/20');

@@ -1,11 +1,13 @@
 CREATE TABLE CLIENT(
    ClientID          VARCHAR(10) NOT NULL PRIMARY KEY,
-   CurrentInvoiceID  VARCHAR(13) NOT NULL FOREIGN KEY REFERENCES Invoice(InvoiceID),
-   HandlerEmployeeID INTEGER  NOT NULL FOREIGN KEY REFERENCES Employee(EmployeeID),
+   CurrentInvoiceID  VARCHAR(13) NOT NULL,
+   HandlerEmployeeID VARCHAR(4) NOT NULL,
    Name              VARCHAR(17) NOT NULL,
-   Phone             INTEGER  NOT NULL,
+   Phone             INTEGER NOT NULL,
    CountryCode       VARCHAR(2) NOT NULL,
-   ContactEmail      VARCHAR(18) NOT NULL
+   ContactEmail      VARCHAR(18) NOT NULL,
+   FOREIGN KEY(CurrentInvoiceID) REFERENCES INVOICE(InvoiceID),
+   FOREIGN KEY(HandlerEmployeeID) REFERENCES EMPLOYEE(EmployeeID)
 );
 
 INSERT INTO CLIENT(ClientID,CurrentInvoiceID,HandlerEmployeeID,Name,Phone,CountryCode,ContactEmail) VALUES ('1','NV/17T0131788',1101,'Evolve Corp.',8362347631,'NY','sales@evolve.com');
