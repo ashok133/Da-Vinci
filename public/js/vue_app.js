@@ -73,5 +73,6 @@ var daVinciVue = new Vue ({
   },
   created() {
     this.addTransaction();
+    this.fetchAllTransactions();
   }
 })
