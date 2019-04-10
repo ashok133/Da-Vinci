@@ -44,7 +44,7 @@ var daVinciVue = new Vue ({
               "ClientID": document.getElementById("ClientID").value,
               "DateAdded": document.getElementById("DateAdded").value,
               "Stage": document.getElementById("Stage").value,
-              "AmountDue": document.getElementById("AmountDue").value,
+              //"AmountDue": document.getElementById("AmountDue").value,
               "BillToContactName": document.getElementById("BillToContactName").value,
               "BillToAddress": document.getElementById("BillToAddress").value,
               "BillToPhone": document.getElementById("BillToPhone").value,
