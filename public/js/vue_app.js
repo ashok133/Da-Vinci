@@ -39,7 +39,7 @@ var daVinciVue = new Vue ({
             body : JSON.stringify( {
               "InvoiceID": document.getElementById("InvoiceID").value,
               "RegulationID": document.getElementById("RegulationID").value,
-              "ContractID":document.getElementById("ContractID").value,
+              "ContractID": document.getElementById("ContractID").value,
               "EmployeeID": document.getElementById("EmployeeID").value,
               "ClientID": document.getElementById("ClientID").value,
               "DateAdded": document.getElementById("DateAdded").value,
@@ -60,7 +60,7 @@ var daVinciVue = new Vue ({
               "AmountDue__1": document.getElementById("AmountDue__1").value,
               "AmountPaid": document.getElementById("AmountPaid").value,
               "PaymentDueDate": document.getElementById("PaymentDueDate").value,
-              "Notes": document.getElementById("Notes").value
+              "Notes": document.getElementById("Notes").value,
             }),
 			      // mode: "no-cors", // no-cors, cors, *same-origin
 			      headers: {
