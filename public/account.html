@@ -109,11 +109,11 @@
         <div class="mx-auto col-md-10 p-4">
           <h1 class="text-light">Account Update&nbsp;</h1>
           <p class="mb-4 lead text-light">Update the appropriate fields below and hit update to add something.&nbsp;</p>
-          <form>
+          <form class="" @submit.prevent="addTransaction">
             <div class="form-row">
-              <div class="form-group col-md-4"> <input type="text" class="form-control" :id="InvoiceID" placeholder="{{addTransaction.InvoiceID}}"> </div>
-              <div class="form-group col-md-4"> <input type="email" class="form-control" :id="RegulationID" placeholder="{{RegulationID}}"> </div>
-              <div class="form-group col-md-4"> <input type="number" class="form-control" :id="EmployeeID" placeholder="{{EmployeeID}}"> </div>
+              <div class="form-group col-md-4"> <input type="text" class="form-control" id="InvoiceID" placeholder="addTransaction.InvoiceID"> </div>
+              <div class="form-group col-md-4"> <input type="email" class="form-control" id="RegulationID" placeholder="RegulationID"> </div>
+              <div class="form-group col-md-4"> <input type="number" class="form-control" id="EmployeeID" placeholder="EmployeeID"> </div>
             </div>
             <!-- <div class="form-row">
               <div class="form-group col-md-4"> <input type="text" class="form-control" id="form22" placeholder="(ClientID)"> </div>
@@ -140,9 +140,9 @@
               <div class="form-group col-md-4"> <input type="email" class="form-control" id="form23" placeholder="(Total)"> </div>
               <div class="form-group col-md-4"> <input type="number" class="form-control" id="form24" placeholder="(AmountPaid)"> </div>
             </div> -->
-            <div class="form-group"> <input type="text" class="form-control" :id="PaymentDueDate" placeholder="{{PaymentDueDate}}"> </div>
-            <div class="form-group"> <textarea class="form-control" :id="Note" rows="3" placeholder="{{Note}}"></textarea> </div> 
-            <button type="submit" class="btn btn-primary" v-on:click="addTransaction">Update</button>
+            <div class="form-group"> <input type="text" class="form-control" id="PaymentDueDate" placeholder="PaymentDueDate"> </div>
+            <div class="form-group"> <textarea class="form-control" id="Note" rows="3" placeholder="Note"></textarea> </div>
+            <button type="submit" class="btn btn-primary">Update</button>
           </form>
         </div>
       </div>
