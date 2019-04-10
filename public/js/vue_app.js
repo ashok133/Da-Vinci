@@ -38,9 +38,9 @@ var daVinciVue = new Vue ({
 			      // }),
             body : JSON.stringify( {
               "InvoiceID": document.getElementById("InvoiceID").value,
-              "RegulationID": "R-15",
+              "RegulationID": document.getElementById("RegulationID").value,
               "ContractID": "PS-1101418",
-              "EmployeeID": 1102,
+              "EmployeeID": document.getElementById("EmployeeID").value,
               "ClientID": 2,
               "DateAdded": "04/08/19",
               "Stage": "sent",
@@ -59,8 +59,8 @@ var daVinciVue = new Vue ({
               "Total": 80321,
               "AmountDue__1": 80321,
               "AmountPaid": "",
-              "PaymentDueDate": "05/08/19",
-              "Notes": "requested early payment"
+              "PaymentDueDate": document.getElementById("PaymentDueDate").value,
+              "Notes": document.getElementById("Notes").value
             }),
 			      // mode: "no-cors", // no-cors, cors, *same-origin
 			      headers: {
