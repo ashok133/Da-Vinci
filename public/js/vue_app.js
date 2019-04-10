@@ -37,7 +37,7 @@ var daVinciVue = new Vue ({
             //
 			      // }),
             body : {
-              "InvoiceID": "NV/17T0132066",
+              "InvoiceID": document.getElementById("InvoiceID").value,
               "RegulationID": "R-15",
               "ContractID": "PS-1101418",
               "EmployeeID": 1102,
