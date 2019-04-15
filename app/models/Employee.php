@@ -8,7 +8,6 @@ class Employee{
   public $firstName;
   public $lastName;
   public $department;
-  public $department;
   public $expPoints;
   public $level;
   public $turnedInvoices;
