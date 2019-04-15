@@ -30,7 +30,7 @@ class Invoice{
   public $notes;
 
   public function __construct($data){
-    $this->invoiceId = isset($data['InvoiceID']) ? intval($data['InvoiceID']):null;
+    $this->invoiceId = $data['InvoiceID'];
     $this->regulationId=$data['RegulationID'];
     $this->contractId = $data['ContractID'];
     $this->clientId = $data['ClientID'];

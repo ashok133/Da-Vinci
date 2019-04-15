@@ -9,7 +9,7 @@ class Contract{
   public $terminationId;
 
   public function __construct($data){
-    $this->contractId = isset($data['ContractID']) ? intval($data['ContractID']):null;
+    $this->contractId = $data['ContractID'];
     $this->companyId=$data['CompanyID'];
     $this->dateSigned = intval($data['DateSigned']);
     $this->terminationId = intval($data['TerminationDate']);
