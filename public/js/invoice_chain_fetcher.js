@@ -1,11 +1,10 @@
-var daVinciVue = new Vue ({
-  el:'#vueBinderDiv',
+var daVinciVueBC = new Vue ({
+  el:'#vueBinderDivBC',
   data: {
     allTransactions: {},
     lastTransaction: {}
   },
   methods: {
-
     fetchAllTransactions() {
       fetch('https://invoice-ledger.herokuapp.com/get_all_invoices')
 	      .then(response => response.json())
@@ -44,7 +43,6 @@ var daVinciVue = new Vue ({
               "ClientID": document.getElementById("ClientID").value,
               "DateAdded": document.getElementById("DateAdded").value,
               "Stage": document.getElementById("Stage").value,
-              //"AmountDue": document.getElementById("AmountDue").value,
               "BillToContactName": document.getElementById("BillToContactName").value,
               "BillToAddress": document.getElementById("BillToAddress").value,
               "BillToPhone": document.getElementById("BillToPhone").value,
@@ -57,7 +55,7 @@ var daVinciVue = new Vue ({
               "ConcessionBool": document.getElementById("ConcessionBool").value,
               "ConcessionValue": document.getElementById("ConcessionValue").value,
               "Total": document.getElementById("Total").value,
-              "AmountDue__1": document.getElementById("AmountDue__1").value,
+              "AmountDue": document.getElementById("AmountDue").value,
               "AmountPaid": document.getElementById("AmountPaid").value,
               "PaymentDueDate": document.getElementById("PaymentDueDate").value,
               "Notes": document.getElementById("Notes").value,
