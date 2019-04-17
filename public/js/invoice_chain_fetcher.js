@@ -10,17 +10,18 @@ var daVinciVueBC = new Vue ({
       fetch('https://invoice-ledger.herokuapp.com/get_all_invoices')
 	      .then(response => response.json())
 	      .then (json => {
-					daVinciVue.allTransactions = json;
-					console.log(daVinciVue.allTransactions)
+					daVinciVueBC.allTransactions = json;
+					console.log(daVinciVueBCdaVinciVueBC.allTransactions)
 				})
 	      .catch( function(err){
 	        console.log(err)
 	      })
     },
     fetchSpecificTransaction() {
-      fetch('https://invoice-ledger.herokuapp.com/get_specific_invoice' {
+      fetch('https://invoice-ledger.herokuapp.com/get_specific_invoice', {
             body : JSON.stringify( {
-              "invoice": document.getElementById("InvoiceID").value
+              // "invoice": document.getElementById("InvoiceID").value
+                  "invoice": "1211"
             }),
 			      headers: {
 			        'Accept': 'application/json, text/plain, */*',
@@ -30,8 +31,8 @@ var daVinciVueBC = new Vue ({
 			    })
 	      .then(response => response.json())
 	      .then (json => {
-					daVinciVue.specificTransaction = json;
-					console.log(daVinciVue.specificTransaction)
+					daVinciVueBC.specificTransaction = json;
+					console.log(daVinciVueBC.specificTransaction)
 				})
 	      .catch( function(err){
 	        console.log(err)
@@ -41,8 +42,8 @@ var daVinciVueBC = new Vue ({
       fetch('https://invoice-ledger.herokuapp.com/get_last_invoice')
 	      .then(response => response.json())
 	      .then (json => {
-					daVinciVue.lastTransaction = json;
-					console.log(daVinciVue.lastTransaction)
+					daVinciVueBC.lastTransaction = json;
+					console.log(daVinciVueBC.lastTransaction)
 				})
 	      .catch( function(err){
 	        console.log(err)
@@ -91,7 +92,8 @@ var daVinciVueBC = new Vue ({
     }
   },
   created() {
-    this.addTransaction();
-    this.fetchAllTransactions();
+    // this.addTransaction();
+    // this.fetchAllTransactions();
+    this.fetchSpecificTransaction();
   }
 })
