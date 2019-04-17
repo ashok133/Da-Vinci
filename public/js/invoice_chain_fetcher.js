@@ -2,7 +2,8 @@ var daVinciVueBC = new Vue ({
   el:'#vueBinderDivBC',
   data: {
     allTransactions: {},
-    lastTransaction: {}
+    lastTransaction: {},
+    specificTransaction: {}
   },
   methods: {
     fetchAllTransactions() {
@@ -11,6 +12,26 @@ var daVinciVueBC = new Vue ({
 	      .then (json => {
 					daVinciVue.allTransactions = json;
 					console.log(daVinciVue.allTransactions)
+				})
+	      .catch( function(err){
+	        console.log(err)
+	      })
+    },
+    fetchSpecificTransaction() {
+      fetch('https://invoice-ledger.herokuapp.com/get_specific_invoice' {
+            body : JSON.stringify( {
+              "invoice": document.getElementById("InvoiceID").value
+            }),
+			      headers: {
+			        'Accept': 'application/json, text/plain, */*',
+			        'Content-Type': 'application/json; charset=utf-8'
+			      },
+			      method: "POST"
+			    })
+	      .then(response => response.json())
+	      .then (json => {
+					daVinciVue.specificTransaction = json;
+					console.log(daVinciVue.specificTransaction)
 				})
 	      .catch( function(err){
 	        console.log(err)
