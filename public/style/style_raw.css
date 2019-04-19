@@ -40,3 +40,44 @@ a.bg-blue:hover, a.bg-blue:focus,
 button.bg-blue:hover,
 button.bg-blue:focus {
   background-color: #0056b3 !important; }
+
+
+.gc-container {
+    margin:100px auto;
+    width:600px;
+    background:#674664;
+    color:#003444;
+}
+.imageBox {
+    position:relative;
+    overflow:hidden;
+}
+.imageBox img {
+    width:100%;
+    transition:.5s;
+}
+.textBox {
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:rgba(0, 120, 7, 0.9);
+    transition:.5s;
+}
+.textBox h1 {
+    margin:0;
+    padding:0;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#fff;
+    font-family:arial;
+}
+.imageBox:hover .textBox {
+    left:0;
+}
+.imageBox:hover img {
+    transform: scale(1.2);
+}
