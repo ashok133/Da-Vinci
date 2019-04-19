@@ -26,7 +26,7 @@ class Invoice{
   public $amountDue;
   public $amountPaid;
   public $paymentDueDate;
-  public $paymentTerm
+  public $paymentTerm;
   public $notes;
 
   public function __construct($data){

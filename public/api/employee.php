@@ -1,6 +1,5 @@
 <?php
 require '../../app/common.php';
-require 'printer.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // require 'commentPost.php';
   exit;

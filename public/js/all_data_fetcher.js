@@ -24,7 +24,7 @@ var daVinciVueRDB = new Vue ({
 	      .then(response => response.json())
 	      .then (json => {
 					daVinciVueRDB.allInvoices = json;
-					console.log(daVinciVueRDB.allInvoices)
+					console.log(daVinciVueRDB.allInvoices[0])
 				})
 	      .catch( function(err){
 	        console.log(err)
