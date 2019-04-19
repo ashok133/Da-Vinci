@@ -9,7 +9,8 @@ var daVinciVueRDB = new Vue ({
     stupid: "STUPID",
     specificTransaction: {
       InvoiceID: "sdasda"
-    }
+    },
+    accountHistory: []
   },
   methods: {
     fetchAllEmployees() {
@@ -53,6 +54,28 @@ var daVinciVueRDB = new Vue ({
           // console.log(json);
 					daVinciVueRDB.specificTransaction = json;
 					console.log(daVinciVueRDB.specificTransaction)
+				})
+	      .catch( function(err){
+	        console.log(err)
+	      })
+    },
+    fetchAccountHistory() {
+      fetch('https://invoice-ledger.herokuapp.com/get_account_history', {
+            method: "POST",
+            body : JSON.stringify({
+              "invoice": "1211"
+                  // "invoice": "1211"
+            }),
+			      headers: {
+			        'Accept': 'application/json, */*',
+			        'Content-Type': 'application/json; charset=utf-8'
+			      },
+			    })
+	      .then(response => response.json())
+	      .then (json => {
+          // console.log(json);
+					daVinciVueRDB.accountHistory = json;
+					console.log(daVinciVueRDB.accountHistory)
 				})
 	      .catch( function(err){
 	        console.log(err)
@@ -139,5 +162,6 @@ var daVinciVueRDB = new Vue ({
     // this.fetchAllClients();
     // this.fetchAllContracts();
     this.fetchAllInvoices();
+    this.fetchAccountHistory()
   }
 })

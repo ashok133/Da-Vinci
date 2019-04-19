@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="style/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body class="">
@@ -33,6 +35,9 @@
       </div>
     </div>
   </nav>
+
+  <div id="vueBinderDivRDB">
+
   <div class="h-50 d-flex align-items-center bg-info" style="">
     <div class="container">
       <div class="row">
@@ -56,40 +61,34 @@
           <!--Table head-->
           <thead>
             <tr>
-              <th>#</th>
-              <th>Account Action</th>
-              <th>Date</th>
-              <th>Amount</th>
+              <th>Notes</th>
+              <th>Stage</th>
+              <th>AmountDue</th>
+              <th>AmountPaid</th>
+              <th>Total</th>
             </tr>
           </thead>
           <!--Table head-->
           <!--Table body-->
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Initial {{Notes}}</td>
-              <td>1/1/19 {{Date_Added}}</td>
-              <td>$85.00 {{AmountPaid}}</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>First Payment{{Notes}}</td>
-              <td>1/28/19 {{Date_Added}}</td>
-              <td>$20.00 {{AmountPaid}}</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>2nd payment {{Notes}}</td>
-              <td>2/15/19 {{Date_Added}}</td>
-              <td>$20.00 {{AmountPaid}}</td>
-            </tr>
-          </tbody>
+          <tbody v-if="accountHistory">
+                            <tr v-for="item in accountHistory">
+                                <!-- <td v-on:click="fetchSpecificTurbinesData(item.siteId)">{{item.siteId}}</td> -->
+                                <td>{{item.Notes}}</td>
+                                <td>{{item.Stage}}</td>
+                                <td>{{item.AmountDue}}</td>
+                                <td>{{item.AmountPaid}}</td>
+                                <td>{{item.Total}}</td>
+                            </tr>
+                        </tbody>
           <!--Table body-->
         </table>
         <!--Table-->
       </div>
     </div>
   </div>
+
+  </div>
+
   <div class="bg-info p-4">
     <div class="container">
       <div class="row">
@@ -131,6 +130,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/all_data_fetcher.js"></script>
 </body>
 
 </html>
