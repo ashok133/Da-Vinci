@@ -1,5 +1,5 @@
 /*!
-* This is "raw" in the sense that it isn't from the preprocessed stuff.  
+* This is "raw" in the sense that it isn't from the preprocessed stuff.
 * from this snippet https://bootsnipp.com/snippets/xrKXW
 */
 
@@ -33,3 +33,10 @@ ul.timeline > li:before {
     height: 20px;
     z-index: 400;
 }
+.bg-blue {
+  background-color: #007bff !important; }
+
+a.bg-blue:hover, a.bg-blue:focus,
+button.bg-blue:hover,
+button.bg-blue:focus {
+  background-color: #0056b3 !important; }
