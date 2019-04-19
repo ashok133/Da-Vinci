@@ -5,7 +5,8 @@ var daVinciVueRDB = new Vue ({
     allContracts: [],
     allRegulations: [],
     allClients: [],
-    allInvoices: []
+    allInvoices: [],
+    stupid: "STUPID"
   },
   methods: {
     fetchAllEmployees() {
