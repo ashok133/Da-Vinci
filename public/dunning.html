@@ -40,47 +40,25 @@
         </div>
       </div>
       <div class="row">
-        <div class="mx-auto text-center col-md-6">
-          <form class="">
-            <div class="form-group"> <label>Account #</label> <input type="email" class="form-control" placeholder="Enter email"> </div>
-            <div class="form-group"> <label>Account Name</label> <input type="password" class="form-control" placeholder="Password"> </div>
-          </form>
+        <div class="col-md-6">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><i class="fa fa-cloud text-primary mr-2"></i>Invoice ID : {{allInvoices[0].invoiceId}}</li>
+            <li class="list-group-item"><i class="fa fa-bookmark text-primary mr-2"></i>&nbsp;Regulation ID:&nbsp; {{allInvoices[0].regulationId}}</li>
+            <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i>Employee ID: {{allInvoices[0].employeeId}}</li>
+            <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i>Client ID: {{allInvoices[0].clientId}}</li>
+            <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i>ContractID: {{allInvoices[0].contractId}}</li>
+            <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i>Date Added: {{allInvoices[0].dateAdded}}</li>
+          </ul>
         </div>
-        <div class="col-md-6 text-body" style="">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="row">
-                <div class="col-md-12">
-                  <h5 class=""><b>Dunning Procedure Number&nbsp;</b></h5>
-                </div>
-              </div>
-              <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-primary active">One</label>
-                <label class="btn btn-primary">Two</label><label class="btn btn-primary">Three</label><label class="btn btn-primary">Four</label><label class="btn btn-primary">Five</label><label class="btn btn-primary">Six</label>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <h6 class=""><br></h6>
-                  <h5 class=""><b>Method of Contact for Dunning&nbsp;</b></h5>
-                  <!-- Default inline 1-->
-                  <div class="custom-control custom-checkbox custom-control-inline">
-                    <input type="checkbox" class="custom-control-input" id="defaultInline1">
-                    <label class="custom-control-label" for="defaultInline1"><b>Email</b></label>
-                  </div>
-                  <!-- Default inline 2-->
-                  <div class="custom-control custom-checkbox custom-control-inline">
-                    <input type="checkbox" class="custom-control-input" id="defaultInline2">
-                    <label class="custom-control-label" for="defaultInline2"><b>SMS</b></label>
-                  </div>
-                  <!-- Default inline 3-->
-                  <div class="custom-control custom-checkbox custom-control-inline">
-                    <input type="checkbox" class="custom-control-input" id="defaultInline3">
-                    <label class="custom-control-label" for="defaultInline3"><b>Push Notification</b></label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="col-md-6">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><i class="fa fa-cloud text-primary mr-2"></i>Invoice ID : {{allInvoices[0].invoiceId}}</li>
+            <li class="list-group-item"><i class="fa fa-bookmark text-primary mr-2"></i>&nbsp;Regulation ID:&nbsp; {{allInvoices[0].regulationId}}</li>
+            <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i>Employee ID: {{allInvoices[0].employeeId}}</li>
+            <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i>Client ID: {{allInvoices[0].clientId}}</li>
+            <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i>ContractID: {{allInvoices[0].contractId}}</li>
+            <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i>Date Added: {{allInvoices[0].dateAdded}}</li>
+          </ul>
         </div>
       </div>
       <div class="row">
@@ -176,6 +154,55 @@
   </div>
   <div class="py-3">
     <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center">Dunning For Account XYZ (view #1)&nbsp;</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mx-auto text-center col-md-6">
+          <form class="">
+            <div class="form-group"> <label>Account #</label> <input type="email" class="form-control" placeholder="Enter email"> </div>
+            <div class="form-group"> <label>Account Name</label> <input type="password" class="form-control" placeholder="Password"> </div>
+          </form>
+        </div>
+        <div class="col-md-6 text-body" style="">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-12">
+                  <h5 class=""><b>Dunning Procedure Number&nbsp;</b></h5>
+                </div>
+              </div>
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-primary active">One</label>
+                <label class="btn btn-primary">Two</label><label class="btn btn-primary">Three</label><label class="btn btn-primary">Four</label><label class="btn btn-primary">Five</label><label class="btn btn-primary">Six</label>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <h6 class=""><br></h6>
+                  <h5 class=""><b>Method of Contact for Dunning&nbsp;</b></h5>
+                  <!-- Default inline 1-->
+                  <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input" id="defaultInline1">
+                    <label class="custom-control-label" for="defaultInline1"><b>Email</b></label>
+                  </div>
+                  <!-- Default inline 2-->
+                  <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input" id="defaultInline2">
+                    <label class="custom-control-label" for="defaultInline2"><b>SMS</b></label>
+                  </div>
+                  <!-- Default inline 3-->
+                  <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input" id="defaultInline3">
+                    <label class="custom-control-label" for="defaultInline3"><b>Push Notification</b></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col-md-8 p-4">
           <h1>Dunning procedure view # 2</h1>
