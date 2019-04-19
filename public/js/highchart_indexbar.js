@@ -3,7 +3,7 @@ Highcharts.chart('barchart', {
         type: 'bar'
     },
     title: {
-        text: 'Stacked bar chart'
+        text: 'Accounts Outstanding'
     },
     xAxis: {
         categories: ['XYZ', '123', 'ABC', '456', 'LOL']
