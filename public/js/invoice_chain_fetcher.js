@@ -19,8 +19,8 @@ var daVinciVueBC = new Vue ({
     },
     fetchSpecificTransaction() {
       fetch('https://invoice-ledger.herokuapp.com/get_specific_invoice', {
+            // mode: 'cors',
             body : JSON.stringify( {
-              // "invoice": document.getElementById("InvoiceID").value
                   "invoice": "1211"
             }),
 			      headers: {
@@ -94,6 +94,6 @@ var daVinciVueBC = new Vue ({
   created() {
     // this.addTransaction();
     // this.fetchAllTransactions();
-    this.fetchSpecificTransaction();
+    // this.fetchSpecificTransaction();
   }
 })
