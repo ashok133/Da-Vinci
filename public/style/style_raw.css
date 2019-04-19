@@ -43,10 +43,10 @@ button.bg-blue:focus {
 
 
 .gc-container {
-    margin:100px auto;
-    width:600px;
-    background:#674664;
-    color:#003444;
+    margin: 0px;
+    width: 100%;
+    background: #ffffff;
+    color: #003444;
 }
 .imageBox {
     position:relative;
