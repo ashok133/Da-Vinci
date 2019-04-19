@@ -70,6 +70,7 @@
                 <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i>Product Cost: {{allInvoices[0].billedProductCost}}</li>
                 <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i>Quantity: {{allInvoices[0].billedProductQuantity}}</li>
                 <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i>Product Line Total: {{allInvoices[0].billedProductLineTotal}}</li>
+                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i>Payment Term: {{allInvoices[0].paymentTerm}}</li>
               </ul>
             </div>
           </div>
@@ -99,9 +100,11 @@
             </div>
           </div>
           <div class="row"></div>
+          <br>
           <div class="row">
-            <div class="col-md-12"><a class="btn btn-secondary btn-lg" href="history.html" target="_blank">Account History</a></div>
+            <div class="col-md-12"><a class="btn btn-primary btn-lg" href="history.html" target="_blank">Account History</a></div>
           </div>
+          <br>
         </div>
       </div>
     </div>
@@ -112,15 +115,19 @@
       <div class="row">
         <div class="mx-auto col-md-10 p-4">
           <h1 class="text-light">Account Update&nbsp;</h1>
-          <p class="mb-4 lead text-light">Update the appropriate fields below and hit update to add something.&nbsp;</p>
+          <!-- <p class="mb-4 lead text-light">Update the appropriate fields below and hit update to add something.&nbsp;</p> -->
 
-
+          <p style="text-align: left;" class="mb-4 lead text-light">Enter the invoice number below:</p>
             <form @submit.prevent="fetchSpecificTransaction">
               <div class="form-row">
                 <div class="form-group col-md-3"> <input type="text" class="form-control" id="invoiceToFetch"></div>
                 <button type="submit" class="btn btn-primary" style="height: 38px;">Fetch Data</button>
               </div>
             </form>
+
+            <br>
+
+            <p style="text-align: left;" class="mb-4 lead text-light">Below are the details on the latest transaction in the chain</p>
 
 
           <form class="" @submit.prevent="addTransaction">
