@@ -90,6 +90,28 @@
     </div>
   </div>
 
+  <h3 class="text-center">Predict Invoice Delay</h3>
+
+  <div class="row">
+    <div class="mx-auto col-md-10 p-4">
+      <form class="" @submit.prevent="predictInvoiceDelay">
+        <div class="form-row">
+          <div class="form-group col-md-4"> <input type="number" class="form-control" id="countryCode" placeholder="Country Code" value=406></div>
+          <div class="form-group col-md-4"> <input type="number" class="form-control" id="invoiceAmount" placeholder="Invoice Amount" value=61.74> </div>
+          <div class="form-group col-md-4"> <input type="number" class="form-control" id="disputed" placeholder="Disputed?" value=0> </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4"> <input type="number" class="form-control" id="daysToSettle" placeholder="Days To Settle (Last inv.)" value=32> </div>
+          <div class="form-group col-md-4"> <input type="number" class="form-control" id="availableDays" placeholder="Available Days" value=30> </div>
+          <div class="form-group col-md-4"> <input type="number" class="form-control" id="paperless" placeholder="Paperless Bill?" value=1> </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Predict</button>
+      </form>
+      <br>
+      <h3 class="text-center"><b>{{invoicePredictionText}}</b></h3>
+    </div>
+  </div>
+
   </div>
 
   <div class="bg-info p-4">
