@@ -10,7 +10,9 @@ var daVinciVueRDB = new Vue ({
     specificTransaction: {
       InvoiceID: "sdasda"
     },
-    accountHistory: []
+    accountHistory: [],
+    invoicePrediction: {},
+    invoicePredictionText: ''
   },
   methods: {
     fetchAllEmployees() {
@@ -154,6 +156,40 @@ var daVinciVueRDB = new Vue ({
 			      },
 			      method: "POST"
 			    })
+    },
+    predictInvoiceDelay() {
+      fetch('https://invoice-ledger.herokuapp.com/predict_invoice_delay', {
+            method: "POST",
+            body : JSON.stringify({
+            	"country_code": document.getElementById('countryCode').value,
+            	"invoice_amount": document.getElementById('invoiceAmount').value,
+            	"disputed": document.getElementById('disputed').value,
+            	"days_to_settle": document.getElementById('daysToSettle').value,
+            	"available_days": document.getElementById('availableDays').value,
+            	"paperless_bool": document.getElementById('paperless').value
+            }),
+			      headers: {
+			        'Accept': 'application/json, */*',
+			        'Content-Type': 'application/json; charset=utf-8',
+              'Access-Control-Allow-Origin': '*'
+			      },
+			    })
+	      .then(response => response.json())
+	      .then (json => {
+          // console.log(json);
+					daVinciVueRDB.invoicePrediction = json;
+					console.log(daVinciVueRDB.invoicePrediction['prediction'])
+          if (daVinciVueRDB.invoicePrediction['prediction'] == 1.0) {
+            console.log('Son of a bitch this works!')
+            daVinciVueRDB.invoicePredictionText = 'The client is likely to delay this time, consider taking action.'
+          }
+          else {
+            daVinciVueRDB.invoicePredictionText = 'The client is not likely to delay this time, sit back and relax.'
+          }
+				})
+	      .catch( function(err){
+	        console.log(err)
+	      })
     }
   },
   created() {
