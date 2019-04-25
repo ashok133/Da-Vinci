@@ -164,7 +164,6 @@ var daVinciVueRDB = new Vue ({
             	"country_code": document.getElementById('countryCode').value,
             	"invoice_amount": document.getElementById('invoiceAmount').value,
             	"disputed": document.getElementById('disputed').value,
-            	"days_to_settle": document.getElementById('daysToSettle').value,
             	"available_days": document.getElementById('availableDays').value,
             	"paperless_bool": document.getElementById('paperless').value
             }),
