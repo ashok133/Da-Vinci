@@ -98,19 +98,31 @@
     <div class="mx-auto col-md-10 p-4">
       <form class="" @submit.prevent="predictInvoiceDelay">
         <div class="form-row">
-          <div class="form-group col-md-4"> <input type="number" class="form-control" id="countryCode" placeholder="Country Code" value=406></div>
-          <div class="form-group col-md-4"> <input type="number" class="form-control" id="invoiceAmount" placeholder="Invoice Amount" value=61.74> </div>
-          <div class="form-group col-md-4"> <input type="number" class="form-control" id="disputed" placeholder="Disputed?" value=0> </div>
+          <div class="form-group col-md-4"> <input type="number" class="form-control" id="countryCode" placeholder="Country Code" value=406><span style="color: #888888">Country code [391, 406, 818, etc]</div>
+          <div class="form-group col-md-4"> <input type="number" class="form-control" id="invoiceAmount" placeholder="Invoice Amount" value=61.74><span style="color: #888888">Invoice Amount</div>
+          <!-- <div class="form-group col-md-4"> <input type="number" class="form-control" id="disputed" placeholder="Disputed?" value=0><span style="color: #888888">Disputed?</div> -->
+            <div class="form-group col-md-4">
+              <select class="form-control" id="disputed">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+              </select><span style="color: #888888">Disputed?</span>
+            </div>
         </div>
         <div class="form-row">
-          <div class="form-group col-md-4"> <input type="number" class="form-control" id="daysToSettle" placeholder="Days To Settle (Last inv.)" value=32> </div>
-          <div class="form-group col-md-4"> <input type="number" class="form-control" id="availableDays" placeholder="Available Days" value=30> </div>
-          <div class="form-group col-md-4"> <input type="number" class="form-control" id="paperless" placeholder="Paperless Bill?" value=1> </div>
+          <div class="form-group col-md-4"> <input type="number" class="form-control" id="availableDays" placeholder="Available Days" value=30> <span style="color: #888888">Available Days</div>
+          <!-- <div class="form-group col-md-4"> <input type="number" class="form-control" id="paperless" placeholder="Paperless Bill?" value=1> </div> -->
+          <div class="form-group col-md-4">
+            <select class="form-control" id="paperless">
+              <option value=1>Paperless</option>
+              <option value=0>Paper</option>
+            </select><span style="color: #888888">Type of bill</span>
+          </div>
         </div>
         <button type="submit" class="btn btn-primary bg-info">Predict</button>
       </form>
       <br>
-      <h3 class="text-center"><b>{{invoicePredictionText}}</b></h3>
+      <h3>The client is <span class="text-center" v-bind:style="{ color: dangerColor }"><b>{{invoicePredictionText}}</b></span></h3>
+      <code><h5>Prediction score: <span class="text-center" v-bind:style="{ color: dangerColor }"><b>{{invoicePredictionConfidence}}</b></span></h5></code>
     </div>
   </div>
 

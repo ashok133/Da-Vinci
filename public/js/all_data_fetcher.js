@@ -8,11 +8,13 @@ var daVinciVueRDB = new Vue ({
     allInvoices: [],
     stupid: "STUPID",
     specificTransaction: {
-      InvoiceID: "sdasda"
+      InvoiceID: ""
     },
     accountHistory: [],
     invoicePrediction: {},
-    invoicePredictionText: ''
+    invoicePredictionText: '[prediction appears here]',
+    invoicePredictionConfidence: '[prediction confidence score shows up here]',
+    dangerColor: '#888888'
   },
   methods: {
     fetchAllEmployees() {
@@ -164,7 +166,6 @@ var daVinciVueRDB = new Vue ({
             	"country_code": document.getElementById('countryCode').value,
             	"invoice_amount": document.getElementById('invoiceAmount').value,
             	"disputed": document.getElementById('disputed').value,
-            	"days_to_settle": document.getElementById('daysToSettle').value,
             	"available_days": document.getElementById('availableDays').value,
             	"paperless_bool": document.getElementById('paperless').value
             }),
@@ -178,13 +179,18 @@ var daVinciVueRDB = new Vue ({
 	      .then (json => {
           // console.log(json);
 					daVinciVueRDB.invoicePrediction = json;
-					console.log(daVinciVueRDB.invoicePrediction['prediction'])
+					console.log("PREDICTION VALUE: " + daVinciVueRDB.invoicePrediction['prediction'])
+          console.log("PREDICTION CONFIDENCE: " + daVinciVueRDB.invoicePrediction['confidence'])
           if (daVinciVueRDB.invoicePrediction['prediction'] == 1.0) {
             console.log('Son of a bitch this works!')
-            daVinciVueRDB.invoicePredictionText = 'The client is likely to delay this time, consider taking action.'
+            daVinciVueRDB.dangerColor = 'red';
+            daVinciVueRDB.invoicePredictionText = ' likely to delay this time, consider taking action.'
+            daVinciVueRDB.invoicePredictionConfidence = daVinciVueRDB.invoicePrediction['confidence']
           }
           else {
-            daVinciVueRDB.invoicePredictionText = 'The client is not likely to delay this time, sit back and relax.'
+            daVinciVueRDB.dangerColor = 'green';
+            daVinciVueRDB.invoicePredictionText = ' not likely to delay this time, sit back and relax.'
+            daVinciVueRDB.invoicePredictionConfidence = daVinciVueRDB.invoicePrediction['confidence']
           }
 				})
 	      .catch( function(err){
