@@ -124,7 +124,7 @@
             <form @submit.prevent="fetchSpecificTransaction">
               <div class="form-row">
                 <div class="form-group col-md-3"> <input type="text" class="form-control" id="invoiceToFetch"></div>
-                <button type="submit" class="btn btn-primary" style="height: 38px;">Fetch Data</button>
+                <button type="submit" class="btn btn-primary bg-info" style="height: 38px;">Fetch Data</button>
               </div>
             </form>
 
@@ -238,7 +238,7 @@
               <label for="Notes">Notes</label>
                <textarea class="form-control" id="Notes" rows="3" v-model="specificTransaction.Notes"></textarea>
              </div>
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn btn-primary bg-info">Update</button>
           </form>
         </div>
       </div>
