@@ -70,10 +70,10 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item"><i class="fa fa-cloud text-primary mr-2"></i><b>Product ID</b>: {{allInvoices[0].billedProductId}}</li>
                 <li class="list-group-item"><i class="fa fa-bookmark text-primary mr-2"></i><b>Product Description</b>: {{allInvoices[0].billedProductDesc}}</li>
-                <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i>Product Cost: {{allInvoices[0].billedProductCost}}</li>
-                <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i>Quantity: {{allInvoices[0].billedProductQuantity}}</li>
-                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i>Product Line Total: {{allInvoices[0].billedProductLineTotal}}</li>
-                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i>Payment Term: {{allInvoices[0].paymentTerm}}</li>
+                <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i><b>Product Cost</b>: {{allInvoices[0].billedProductCost}}</li>
+                <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i><b>Quantity</b>: {{allInvoices[0].billedProductQuantity}}</li>
+                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i><b>Product Line Total</b>: {{allInvoices[0].billedProductLineTotal}}</li>
+                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i><b>Payment Term</b>: {{allInvoices[0].paymentTerm}}</li>
               </ul>
             </div>
           </div>
@@ -85,20 +85,20 @@
           <div class="row">
             <div class="col-md-6">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><i class="fa fa-cloud text-primary mr-2"></i>Amount Due : {{allInvoices[0].amountDue}}&nbsp;</li>
-                <li class="list-group-item"><i class="fa fa-bookmark text-primary mr-2"></i>Address: {{allInvoices[0].billToAddress}}</li>
-                <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i>Phone: {{allInvoices[0].billToPhone}}&nbsp;</li>
-                <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i>Email : {{allInvoices[0].billToEmail}}&nbsp;</li>
-                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i>Notes: {{allInvoices[0].notes}}</li>
+                <li class="list-group-item"><i class="fa fa-cloud text-primary mr-2"></i><b>Amount Due</b> : {{allInvoices[0].amountDue}}</li>
+                <li class="list-group-item"><i class="fa fa-bookmark text-primary mr-2"></i><b>Address</b>: {{allInvoices[0].billToAddress}}</li>
+                <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i><b>Phone</b>: {{allInvoices[0].billToPhone}}</li>
+                <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i><b>Email</b>: {{allInvoices[0].billToEmail}}</li>
+                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i><b>Notes</b>: {{allInvoices[0].notes}}</li>
               </ul>
             </div>
             <div class="col-md-6">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><i class="fa fa-cloud text-primary mr-2"></i><span style="font-size: 1rem;">Concession? : {{allInvoices[0].concessionBool}}&nbsp;</span></li>
-                <li class="list-group-item"><i class="fa fa-bookmark text-primary mr-2"></i>Concession Amount : {{allInvoices[0].concessionValue}}&nbsp;</li>
-                <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i>Total: {{allInvoices[0].Total}}&nbsp;</li>
-                <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i>Paid : {{allInvoices[0].AmountPaid}}&nbsp;</li>
-                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i>Due Date : {{allInvoices[0].paymentDueDate}}</li>
+                <li class="list-group-item"><i class="fa fa-cloud text-primary mr-2"></i><b>Concession?</b>: {{allInvoices[0].concessionBool}}</li>
+                <li class="list-group-item"><i class="fa fa-bookmark text-primary mr-2"></i><b>Concession Amount</b> : {{allInvoices[0].concessionValue}}</li>
+                <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i><b>Total</b>: {{allInvoices[0].Total}}&nbsp;</li>
+                <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i><b>Paid</b> : {{allInvoices[0].AmountPaid}}&nbsp;</li>
+                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i><b>Due Date</b> : {{allInvoices[0].paymentDueDate}}</li>
               </ul>
             </div>
           </div>
@@ -135,40 +135,109 @@
 
           <form class="" @submit.prevent="addTransaction">
             <div class="form-row">
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="InvoiceID" v-model="specificTransaction.InvoiceID"></div>
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="RegulationID" v-model="specificTransaction.RegulationID"> </div>
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="EmployeeID" v-model="specificTransaction.EmployeeID"> </div>
+              <div class="form-group col-md-4">
+                <label for="InvoiceID">Invoice ID</label>
+                <input type="text" class="form-control" id="InvoiceID" v-model="specificTransaction.InvoiceID">
+              </div>
+              <div class="form-group col-md-4">
+                 <label for="RegulationID">Regulation ID</label>
+                 <input type="text" class="form-control" id="RegulationID" v-model="specificTransaction.RegulationID">
+                </div>
+              <div class="form-group col-md-4">
+                <label for="EmployeeID">Employee ID</label>
+                <input type="text" class="form-control" id="EmployeeID" v-model="specificTransaction.EmployeeID">
+               </div>
             </div>
             <div class="form-row">
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="ClientID" v-model="specificTransaction.ClientID"> </div>
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="DateAdded" v-model="specificTransaction.DateAdded"> </div>
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="AmountDue" v-model="specificTransaction.AmountDue"> </div>
+              <div class="form-group col-md-4">
+                <label for="ClientID">Client ID</label>
+                 <input type="text" class="form-control" id="ClientID" v-model="specificTransaction.ClientID">
+                </div>
+              <div class="form-group col-md-4">
+                <label for="DateAdded">Date Added</label>
+                 <input type="text" class="form-control" id="DateAdded" v-model="specificTransaction.DateAdded">
+                </div>
+              <div class="form-group col-md-4">
+                <label for="AmountDue">Amount Due</label>
+                 <input type="text" class="form-control" id="AmountDue" v-model="specificTransaction.AmountDue">
+                </div>
             </div>
             <div class="form-row">
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="BillToAddress" v-model="specificTransaction.BillToAddress"> </div>
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="BillToPhone" v-model="specificTransaction.BillToPhone"> </div>
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="BillToEmail" v-model="specificTransaction.BillToEmail"> </div>
+              <div class="form-group col-md-4">
+                <label for="BillToAddress">Bill To Address</label>
+                 <input type="text" class="form-control" id="BillToAddress" v-model="specificTransaction.BillToAddress">
+                </div>
+              <div class="form-group col-md-4">
+                <label for="BillToPhone">Bill To Phone</label>
+                <input type="text" class="form-control" id="BillToPhone" v-model="specificTransaction.BillToPhone">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="BillToEmail">Bill To Email</label>
+                 <input type="text" class="form-control" id="BillToEmail" v-model="specificTransaction.BillToEmail">
+                </div>
             </div>
             <div class="form-row">
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="BilledProductID" v-model="specificTransaction.BilledProductID"> </div>
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="BilledProductDesc" v-model="specificTransaction.BilledProductDesc"> </div>
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="BilledProductCost" v-model="specificTransaction.BilledProductCost"> </div>
+              <div class="form-group col-md-4">
+                <label for="BilledProductID">Billed Product ID</label>
+                <input type="text" class="form-control" id="BilledProductID" v-model="specificTransaction.BilledProductID">
+               </div>
+              <div class="form-group col-md-4">
+                <label for="BilledProductDesc">Billed Product Description</label>
+                 <input type="text" class="form-control" id="BilledProductDesc" v-model="specificTransaction.BilledProductDesc">
+               </div>
+              <div class="form-group col-md-4">
+                <label for="BilledProductCost">Billed Product Cost</label>
+                 <input type="text" class="form-control" id="BilledProductCost" v-model="specificTransaction.BilledProductCost">
+               </div>
             </div>
             <div class="form-row">
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="BilledProductQuantity" v-model="specificTransaction.BilledProductQuantity"> </div>
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="BilledProductLineTotal" v-model="specificTransaction.BilledProductLineTotal"> </div>
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="ConcessionBool" v-model="specificTransaction.ConcessionBool"> </div>
+              <div class="form-group col-md-4">
+                <label for="BilledProductQuantity">Billed Product Quantity</label>
+                <input type="text" class="form-control" id="BilledProductQuantity" v-model="specificTransaction.BilledProductQuantity">
+               </div>
+              <div class="form-group col-md-4">
+                <label for="BilledProductLineTotal">Billed Product Line Total</label>
+                <input type="text" class="form-control" id="BilledProductLineTotal" v-model="specificTransaction.BilledProductLineTotal">
+               </div>
+              <div class="form-group col-md-4">
+                <label for="ConcessionBool">Concession? </label>
+                 <input type="text" class="form-control" id="ConcessionBool" v-model="specificTransaction.ConcessionBool">
+                </div>
             </div>
             <div class="form-row">
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="ConcessionValue" v-model="specificTransaction.ConcessionValue"> </div>
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="Total" v-model="specificTransaction.Total"> </div>
-              <div class="form-group col-md-4"> <input type="text" class="form-control" id="AmountPaid" v-model="specificTransaction.AmountPaid"> </div>
+              <div class="form-group col-md-4">
+                <label for="ConcessionValue">Concession Amount</label>
+                 <input type="text" class="form-control" id="ConcessionValue" v-model="specificTransaction.ConcessionValue">
+               </div>
+              <div class="form-group col-md-4">
+                <label for="Total">Total</label>
+                <input type="text" class="form-control" id="Total" v-model="specificTransaction.Total">
+               </div>
+              <div class="form-group col-md-4">
+                <label for="AmountPaid">AmountPaid</label>
+                 <input type="text" class="form-control" id="AmountPaid" v-model="specificTransaction.AmountPaid">
+               </div>
             </div>
-            <div class="form-group"> <input type="text" class="form-control" id="PaymentDueDate" v-model="specificTransaction.PaymentDueDate"> </div>
-            <div class="form-group"> <input type="text" class="form-control" id="ContractID" v-model="specificTransaction.ContractID"> </div>
-            <div class="form-group"> <input type="text" class="form-control" id="Stage" v-model="specificTransaction.Stage"> </div>
-            <div class="form-group"> <input type="text" class="form-control" id="BillToContactName" v-model="specificTransaction.BillToContactName"> </div>
-            <div class="form-group"> <textarea class="form-control" id="Notes" rows="3" v-model="specificTransaction.Notes"></textarea> </div>
+            <div class="form-group">
+              <label for="PaymentDueDate">Payment Due Date</label>
+              <input type="text" class="form-control" id="PaymentDueDate" v-model="specificTransaction.PaymentDueDate">
+             </div>
+            <div class="form-group">
+              <label for="ContractID">ContractID</label>
+               <input type="text" class="form-control" id="ContractID" v-model="specificTransaction.ContractID">
+             </div>
+            <div class="form-group">
+              <label for="Stage">Stage</label>
+               <input type="text" class="form-control" id="Stage" v-model="specificTransaction.Stage">
+            </div>
+            <div class="form-group">
+              <label for="BillToContactName">Bill To Contact Name</label>
+               <input type="text" class="form-control" id="BillToContactName" v-model="specificTransaction.BillToContactName">
+            </div>
+            <div class="form-group">
+              <label for="Notes">Notes</label>
+               <textarea class="form-control" id="Notes" rows="3" v-model="specificTransaction.Notes"></textarea>
+             </div>
             <button type="submit" class="btn btn-primary">Update</button>
           </form>
         </div>
