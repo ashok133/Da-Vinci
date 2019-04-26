@@ -4331,7 +4331,7 @@ button.bg-primary:focus {
   background-color: #b4b4b4 !important; }
 
 .bg-secondary {
-  background-color: #b0b0b0 !important; }
+  background-color: #74abe2 !important; }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
@@ -4371,7 +4371,7 @@ button.bg-danger:focus {
   background-color: #bd2130 !important; }
 
 .bg-light {
-  background-color: #eaeaea !important; }
+  background-color: #74abe2 !important; }
 
 a.bg-light:hover, a.bg-light:focus,
 button.bg-light:hover,
