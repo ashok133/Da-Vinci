@@ -58,21 +58,22 @@
           <div class="row">
             <div class="col-md-6">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><i class="fa fa-cloud text-primary mr-2"></i>Invoice ID : {{allInvoices[0].invoiceId}}</li>
-                <li class="list-group-item"><i class="fa fa-bookmark text-primary mr-2"></i>&nbsp;Regulation ID:&nbsp; {{allInvoices[0].regulationId}}</li>
-                <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i>Employee ID: {{allInvoices[0].employeeId}}</li>
-                <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i>Client ID: {{allInvoices[0].clientId}}</li>
-                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i>ContractID: {{allInvoices[0].contractId}}</li>
-                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i>Date Added: {{allInvoices[0].dateAdded}}</li>
+                <li class="list-group-item"><i class="fa fa-cloud text-primary mr-2"></i><b>Invoice ID</b> : {{allInvoices[0].invoiceId}}</li>
+                <li class="list-group-item"><i class="fa fa-bookmark text-primary mr-2"></i><b>Regulation ID</b>: {{allInvoices[0].regulationId}}</li>
+                <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i><b>Employee ID</b>: {{allInvoices[0].employeeId}}</li>
+                <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i><b>Client ID</b>: {{allInvoices[0].clientId}}</li>
+                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i><b>ContractID</b>: {{allInvoices[0].contractId}}</li>
+                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i><b>Date Added</b>: {{allInvoices[0].dateAdded}}</li>
               </ul>
             </div>
             <div class="col-md-6">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><i class="fa fa-cloud text-primary mr-2"></i><span style="font-size: 1rem;">Product ID: {{allInvoices[0].billedProductId}}</span></li>
-                <li class="list-group-item"><i class="fa fa-bookmark text-primary mr-2"></i>Product Description: {{allInvoices[0].billedProductDesc}}</li>
-                <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i>Product Cost: {{allInvoices[0].billedProductCost}}</li>
-                <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i>Quantity: {{allInvoices[0].billedProductQuantity}}</li>
-                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i>Product Line Total: {{allInvoices[0].billedProductLineTotal}}</li>
+                <li class="list-group-item"><i class="fa fa-cloud text-primary mr-2"></i><b>Product ID</b>: {{allInvoices[0].billedProductId}}</li>
+                <li class="list-group-item"><i class="fa fa-bookmark text-primary mr-2"></i><b>Product Description</b>: {{allInvoices[0].billedProductDesc}}</li>
+                <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i><b>Product Cost</b>: {{allInvoices[0].billedProductCost}}</li>
+                <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i><b>Quantity</b>: {{allInvoices[0].billedProductQuantity}}</li>
+                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i><b>Product Line Total</b>: {{allInvoices[0].billedProductLineTotal}}</li>
+                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i><b>Payment Term</b>: {{allInvoices[0].paymentTerm}}</li>
               </ul>
             </div>
           </div>
@@ -84,20 +85,20 @@
           <div class="row">
             <div class="col-md-6">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><i class="fa fa-cloud text-primary mr-2"></i>Amount Due : {{allInvoices[0].amountDue}}&nbsp;</li>
-                <li class="list-group-item"><i class="fa fa-bookmark text-primary mr-2"></i>Address: {{allInvoices[0].billToAddress}}</li>
-                <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i>Phone: {{allInvoices[0].billToPhone}}&nbsp;</li>
-                <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i>Email : {{allInvoices[0].billToEmail}}&nbsp;</li>
-                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i>Notes: {{notes}}</li>
+                <li class="list-group-item"><i class="fa fa-cloud text-primary mr-2"></i><b>Amount Due</b> : {{allInvoices[0].amountDue}}</li>
+                <li class="list-group-item"><i class="fa fa-bookmark text-primary mr-2"></i><b>Address</b>: {{allInvoices[0].billToAddress}}</li>
+                <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i><b>Phone</b>: {{allInvoices[0].billToPhone}}</li>
+                <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i><b>Email</b>: {{allInvoices[0].billToEmail}}</li>
+                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i><b>Notes</b>: {{allInvoices[0].notes}}</li>
               </ul>
             </div>
             <div class="col-md-6">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><i class="fa fa-cloud text-primary mr-2"></i><span style="font-size: 1rem;">Concession? : {{allInvoices[0].concessionBool}}&nbsp;</span></li>
-                <li class="list-group-item"><i class="fa fa-bookmark text-primary mr-2"></i>Concession Amount : {{allInvoices[0].concessionValue}}&nbsp;</li>
-                <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i>Total: {{allInvoices[0].total}}&nbsp;</li>
-                <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i>Paid : {{allInvoices[0].amountPaid}}&nbsp;</li>
-                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i>Due Date : {{allInvoices[0].paymentDueDate}}</li>
+                <li class="list-group-item"><i class="fa fa-cloud text-primary mr-2"></i><b>Concession?</b>: {{allInvoices[0].concessionBool}}</li>
+                <li class="list-group-item"><i class="fa fa-bookmark text-primary mr-2"></i><b>Concession Amount</b> : {{allInvoices[0].concessionValue}}</li>
+                <li class="list-group-item"><i class="fa fa-bell text-primary mr-2"></i><b>Total</b>: {{allInvoices[0].Total}}&nbsp;</li>
+                <li class="list-group-item"><i class="fa fa-life-ring text-primary mr-2"></i><b>Paid</b> : {{allInvoices[0].AmountPaid}}&nbsp;</li>
+                <li class="list-group-item"><i class="fa fa-paper-plane text-primary mr-2"></i><b>Due Date</b> : {{allInvoices[0].paymentDueDate}}</li>
               </ul>
             </div>
           </div>
